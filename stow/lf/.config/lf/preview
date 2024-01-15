@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+file=$1
+w=$2
+h=$3
+x=$4
+y=$5
+
+case "$1" in
+*.tgz | *.tar.gz) tar tzf "$1" ;;
+*.tar.bz2 | *.tbz2) tar tjf "$1" ;;
+*.tar.txz | *.txz) xz --list "$1" ;;
+*.tar) tar tf "$1" ;;
+*.zip | *.jar | *.war | *.ear | *.oxt) unzip -l "$1" ;;
+*) bat --color always --paging=never --style="changes" "$1" ;;
+esac
