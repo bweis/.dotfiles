@@ -52,6 +52,7 @@ packages=(
 	telnet
 	websocat #  https://github.com/vi/websocat
 	wget
+  vite
 	zsh
 	zsh-autosuggestions
 	zsh-syntax-highlighting

@@ -1,5 +1,6 @@
 apps=(
-	clipy # Clipboard manager https://github.com/Clipy/Clipy
+  android-file-transfer # https://www.android.com/filetransfer/
+  clipy # Clipboard manager https://github.com/Clipy/Clipy
 	discord
 	docker
 	firefox
