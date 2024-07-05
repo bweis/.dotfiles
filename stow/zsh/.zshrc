@@ -67,6 +67,7 @@ setopt nobeep
 
 plugins=(
 	docker # auto-completion for docker
+  asdf
 )
 
 # Enable option-stacking for docker (i.e docker run -it <TAB>)
@@ -87,8 +88,8 @@ source $BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ################# Config ####################
 
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eva; "$(oh-my-posh init zsh)"
 
 # changes ctrl-u to delete everything to the left of the cursor, rather than the whole line
 bindkey "^U" backward-kill-line
@@ -97,8 +98,8 @@ bindkey '^[[3;3~' kill-word
 
 # zsh syntax highlighting clears and restores aliases after .zshenv is loaded
 # this keeps ls and ll aliased correctly
-alias ls="exa --group-directories-first -G  --color auto --icons -a -s type"
-alias ll="exa --group-directories-first -l --color always --icons -a -s type"
+alias ls="eza --group-directories-first -G  --color auto --icons -a -s type"
+alias ll="eza --group-directories-first -l --color always --icons -a -s type"
 
 # Golang
 export GOPATH="$HOME/go"
@@ -109,9 +110,6 @@ export GOPATH="$HOME/go"
 
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-
-# Starship
-eval "$(starship init zsh)"
 
 # K8s completions
 [[ -x "$(command -v kubectl)" ]] && source <(kubectl completion zsh)
@@ -150,4 +148,4 @@ zsh-ctrl-z () {
 zle -N zsh-ctrl-z
 bindkey '^z' zsh-ctrl-z
 
-echo "( .-.)"
+echo ".zshrc loaded 😬"

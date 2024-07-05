@@ -12,7 +12,7 @@ packages=(
 	ctags
 	curl
 	dust  #  https://github.com/bootandy/dust
-	exa   #  https://github.com/ogham/exa
+	eza   #  https://github.com/eza-community/eza
 	fd    #  https://github.com/sharkdp/fd
 	gettext
 	git-delta #  https://github.com/dandavison/delta
@@ -35,7 +35,8 @@ packages=(
 	minikube
 	node
 	nmap
-	openjdk
+	jandedobbeleer/oh-my-posh/oh-my-posh
+  openjdk
 	openssl
 	pinentry-mac
 	postgresql
@@ -46,7 +47,6 @@ packages=(
 	rustup
 	sd #  https://github.com/chmln/sd
 	shellcheck
-	starship	#https://starship.rs/
 	stow
 	stylua #  https://github.com/JohnnyMorganz/StyLua
 	telnet

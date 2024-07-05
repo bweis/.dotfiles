@@ -2,7 +2,6 @@ apps=(
   android-file-transfer # https://www.android.com/filetransfer/
   clipy # Clipboard manager https://github.com/Clipy/Clipy
 	discord
-	docker
 	firefox
 	google-chrome
 	rectangle # Window util
@@ -13,6 +12,7 @@ apps=(
 
 mas_apps=(
 	1136220934 # Infuse
+  1447330651 # copilot money
 )
 
 install_macos_apps() {
