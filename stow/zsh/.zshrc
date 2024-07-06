@@ -89,7 +89,7 @@ source $BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ################# Config ####################
 
 eval "$(zoxide init zsh)"
-eva; "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh)"
 
 # changes ctrl-u to delete everything to the left of the cursor, rather than the whole line
 bindkey "^U" backward-kill-line

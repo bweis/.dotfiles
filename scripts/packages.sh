@@ -1,6 +1,4 @@
 taps=(
-	homebrew/cask
-	homebrew/cask-fonts
 	wez/wezterm
 )
 

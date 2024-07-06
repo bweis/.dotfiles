@@ -1,6 +1,5 @@
 apps=(
-  android-file-transfer # https://www.android.com/filetransfer/
-  clipy # Clipboard manager https://github.com/Clipy/Clipy
+    clipy # Clipboard manager https://github.com/Clipy/Clipy
 	discord
 	firefox
 	google-chrome
