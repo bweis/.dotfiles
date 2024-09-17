@@ -3,6 +3,7 @@ taps=(
 )
 
 packages=(
+	asdf
 	bat       #  https://github.com/sharkdp/bat
 	bandwhich #  https://github.com/imsnif/bandwhich
 	bottom    #  https://github.com/ClementTsang/bottom

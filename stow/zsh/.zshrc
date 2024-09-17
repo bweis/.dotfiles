@@ -101,6 +101,9 @@ bindkey '^[[3;3~' kill-word
 alias ls="eza --group-directories-first -G  --color auto --icons -a -s type"
 alias ll="eza --group-directories-first -l --color always --icons -a -s type"
 
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # Golang
 export GOPATH="$HOME/go"
 # export GOROOT="$HOME/go/current"
@@ -147,5 +150,19 @@ zsh-ctrl-z () {
 }
 zle -N zsh-ctrl-z
 bindkey '^z' zsh-ctrl-z
+
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+# Java stuff
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home) 
+
+# For expo
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
 
 echo ".zshrc loaded 😬"

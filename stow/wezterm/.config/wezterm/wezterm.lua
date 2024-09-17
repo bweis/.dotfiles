@@ -3,7 +3,7 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 -- https://wezfurlong.org/wezterm/config/lua/wezterm/target_triple.html
 local is_windows = wezterm.target_triple == 'x86_64-pc-windows-msvc'
-local font = 'FiraCode Nerd Font Mono'
+local font = 'FiraMono Nerd Font Mono'
 local key_mod_panes = is_windows and 'ALT' or 'CMD'
 
 local keys = {
@@ -73,21 +73,21 @@ local keys = {
   { key = 'z', mods = key_mod_panes, action = act.TogglePaneZoomState },
   { key = 'x', mods = 'SHIFT|' .. key_mod_panes, action = act.ActivateCopyMode },
 
-  {
-    key = '1',
-    mods = key_mod_panes,
-    action = wezterm.action_callback(function(_win, pane)
-      pane:move_to_new_tab()
-    end),
-  },
+  -- {
+  --   key = '1',
+  --   mods = key_mod_panes,
+  --   action = wezterm.action_callback(function(_win, pane)
+  --     pane:move_to_new_tab()
+  --   end),
+  -- },
 
-  {
-    key = '!',
-    mods = 'SHIFT|' .. key_mod_panes,
-    action = wezterm.action_callback(function(_win, pane)
-      pane:move_to_new_window()
-    end),
-  },
+  -- {
+  --   key = '!',
+  --   mods = 'SHIFT|' .. key_mod_panes,
+  --   action = wezterm.action_callback(function(_win, pane)
+  --     pane:move_to_new_window()
+  --   end),
+  -- },
 
   -- Activation
   {
@@ -114,30 +114,30 @@ local keys = {
     action = act.ActivatePaneDirection('Down'),
   },
 
-  -- Size
-  {
-    key = 'H',
-    mods = 'SHIFT|' .. key_mod_panes,
-    action = act.AdjustPaneSize({ 'Left', 1 }),
-  },
+  -- -- Size
+  -- {
+  --   key = 'H',
+  --   mods = 'SHIFT|' .. key_mod_panes,
+  --   action = act.AdjustPaneSize({ 'Left', 1 }),
+  -- },
 
-  {
-    key = 'J',
-    mods = 'SHIFT|' .. key_mod_panes,
-    action = act.AdjustPaneSize({ 'Down', 1 }),
-  },
+  -- {
+  --   key = 'J',
+  --   mods = 'SHIFT|' .. key_mod_panes,
+  --   action = act.AdjustPaneSize({ 'Down', 1 }),
+  -- },
 
-  {
-    key = 'K',
-    mods = 'SHIFT|' .. key_mod_panes,
-    action = act.AdjustPaneSize({ 'Up', 1 }),
-  },
+  -- {
+  --   key = 'K',
+  --   mods = 'SHIFT|' .. key_mod_panes,
+  --   action = act.AdjustPaneSize({ 'Up', 1 }),
+  -- },
 
-  {
-    key = 'L',
-    mods = 'SHIFT|' .. key_mod_panes,
-    action = act.AdjustPaneSize({ 'Right', 1 }),
-  },
+  -- {
+  --   key = 'L',
+  --   mods = 'SHIFT|' .. key_mod_panes,
+  --   action = act.AdjustPaneSize({ 'Right', 1 }),
+  -- },
 
   -- Rotate
   {
@@ -236,8 +236,15 @@ local keys = {
   -- Bypass
   { key = '/', mods = 'CTRL', action = act.SendKey({ key = '/', mods = 'CTRL' }) },
   { key = 'q', mods = 'CTRL', action = act.SendKey({ key = 'q', mods = 'CTRL' }) },
-  { key = 'k', mods = 'CTRL', action = act.SendKey({ key = 'k', mods = 'CTRL' }) },
+  -- { key = 'k', mods = 'CTRL', action = act.SendKey({ key = 'k', mods = 'CTRL' }) },
   { key = 'i', mods = 'CTRL', action = act.SendKey({ key = 'i', mods = 'CTRL' }) },
+
+  -- Clears the scrollback and viewport leaving the prompt line the new first line.
+  {
+    key = 'k',
+    mods = 'CMD',
+    action = act.ClearScrollback 'ScrollbackAndViewport',
+  },
 }
 
 local process_icons = {
