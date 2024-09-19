@@ -67,7 +67,6 @@ setopt nobeep
 
 plugins=(
 	docker # auto-completion for docker
-  asdf
 )
 
 # Enable option-stacking for docker (i.e docker run -it <TAB>)
@@ -100,9 +99,6 @@ bindkey '^[[3;3~' kill-word
 # this keeps ls and ll aliased correctly
 alias ls="eza --group-directories-first -G  --color auto --icons -a -s type"
 alias ll="eza --group-directories-first -l --color always --icons -a -s type"
-
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Golang
 export GOPATH="$HOME/go"
@@ -164,5 +160,12 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # For expo
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
+### Start Rippling
+# For Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
+export DEVELOPER_NAME=bweis
+### End Rippling
 echo ".zshrc loaded 😬"
