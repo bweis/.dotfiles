@@ -48,7 +48,8 @@ packages=(
 	stow
 	stylua #  https://github.com/JohnnyMorganz/StyLua
 	telnet
-	websocat #  https://github.com/vi/websocat
+	tmux
+  websocat #  https://github.com/vi/websocat
 	wget
   vite
 	zsh
