@@ -65,10 +65,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt appendhistory # Immediately append history instead of overwriting
 setopt nobeep
 
-plugins=(
-	docker # auto-completion for docker
-  asdf
-)
+plugins=()
 
 # Enable option-stacking for docker (i.e docker run -it <TAB>)
 zstyle ':completion:*:*:docker:*' option-stacking yes
